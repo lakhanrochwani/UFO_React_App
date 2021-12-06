@@ -5,6 +5,20 @@ import dataArr from './data';
 
 export default function App() {
   let [data, setData] = useState(dataArr);
+  const handleSortByDate = () => {
+    let sortedData = dataArr.sort((a, b) => {
+      const aDate = new Date(a.datetime);
+      const bDate = new Date(b.datetime);
+      if (aDate > bDate) {
+        return 1;
+      }
+      if (aDate < bDate) {
+        return -1;
+      }
+      return 0;
+    });
+    setData([...sortedData]);
+  };
   const handleSortByCity = () => {
     let sortedData = dataArr.sort((a, b) => (a.city > b.city ? 1 : -1));
     setData([...sortedData]);
@@ -34,6 +48,7 @@ export default function App() {
         <em>The Truth is Out There</em>
       </p>
       <TableComponent
+        sortByDate={handleSortByDate}
         sortByCity={handleSortByCity}
         sortByState={handleSortByState}
         sortByCountry={handleSortByCountry}

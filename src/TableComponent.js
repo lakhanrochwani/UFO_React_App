@@ -3,6 +3,7 @@ import DataColumns from './DataColumns';
 
 const TableComponent = ({
   data,
+  sortByDate,
   sortByCity,
   sortByState,
   sortByCountry,
@@ -13,7 +14,7 @@ const TableComponent = ({
     <main>
       <table>
         <tr>
-          <th>Date</th>
+          <th onClick={sortByDate}>Date &uarr;</th>
           <th onClick={sortByCity}>City &uarr;</th>
           <th onClick={sortByState}>State &uarr; </th>
           <th onClick={sortByCountry}>Country &uarr;</th>
