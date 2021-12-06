@@ -16,8 +16,12 @@ const TableComponent = ({
         <tr>
           <th onClick={sortByDate}>Date &uarr;</th>
           <th onClick={sortByCity}>City &uarr;</th>
-          <th onClick={sortByState}>State &uarr; </th>
-          <th onClick={sortByCountry}>Country &uarr;</th>
+          <th style={{ width: '65px' }} onClick={sortByState}>
+            State &uarr;{' '}
+          </th>
+          <th style={{ width: '75px' }} onClick={sortByCountry}>
+            Country &uarr;
+          </th>
           <th onClick={sortByShape}>Shape &uarr;</th>
           <th onClick={sortByDuration}>Duration &uarr;</th>
           <th>Comments</th>
