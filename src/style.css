@@ -1,0 +1,29 @@
+h1,
+p {
+  font-family: Lato;
+  text-align: center;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  max-width: 100%;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+th {
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em 1em;
+}
